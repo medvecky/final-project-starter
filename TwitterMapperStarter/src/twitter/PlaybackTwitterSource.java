@@ -11,7 +11,8 @@ import util.ObjectSource;
  *
  * Implements Observable - each tweet is signalled to all observers
  */
-public class PlaybackTwitterSource extends TwitterSource {
+public class
+PlaybackTwitterSource extends TwitterSource {
     // The speedup to apply to the recorded stream of tweets; 2 means play at twice the rate
     // at which the tweets were recorded
     private final double speedup;
