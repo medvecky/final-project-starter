@@ -4,6 +4,7 @@ import org.openstreetmap.gui.jmapviewer.Coordinate;
 import org.openstreetmap.gui.jmapviewer.Layer;
 import org.openstreetmap.gui.jmapviewer.MapMarkerCircle;
 
+
 import java.awt.*;
 
 public class MapMarkerSimple extends MapMarkerCircle {

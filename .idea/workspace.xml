@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="493994da-a99d-4ffa-a55c-69e7a7e63e85" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/filters/AndFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/filters/OrFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/filters/Parser.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/filters/Parser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/filters/test/TestFilters$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/filters/test/TestFilters$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/filters/test/TestFilters.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/filters/test/TestFilters.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/twitter/PlaybackTwitterSource$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/twitter/PlaybackTwitterSource$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/twitter/PlaybackTwitterSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/twitter/PlaybackTwitterSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/twitter/TwitterSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/twitter/TwitterSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/twitter/test/TestPlaybackTwitterSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/twitter/test/TestPlaybackTwitterSource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/filters/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/filters/Parser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/filters/test/TestFilters.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/filters/test/TestFilters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/twitter/TwitterSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/twitter/TwitterSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/twitter/test/TestPlaybackTwitterSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/twitter/test/TestPlaybackTwitterSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/query/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/query/Query.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/query/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/query/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/MapMarkerSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/MapMarkerSimple.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,31 +58,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.filters.test in TwitterMapperStarter">
+  <component name="RunManager" selected="Application.Application">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ui.Application" />
+      <module name="TwitterMapperStarter" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFilters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TwitterMapperStarter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="filters.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="filters.test" />
-      <option name="MAIN_CLASS_NAME" value="filters.test.TestFilters" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,11 +209,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Application" />
         <item itemvalue="JUnit.filters.test in TwitterMapperStarter" />
         <item itemvalue="JUnit.TestParser.testHairy" />
         <item itemvalue="JUnit.TestScanner" />
         <item itemvalue="JUnit.filters in TwitterMapperStarter" />
-        <item itemvalue="JUnit.TestFilters" />
       </list>
     </recent_temporary>
   </component>
@@ -241,6 +231,8 @@
       <workItem from="1578982364455" duration="8264000" />
       <workItem from="1579070985356" duration="7273000" />
       <workItem from="1579087557071" duration="99000" />
+      <workItem from="1579156444816" duration="2038000" />
+      <workItem from="1579161287913" duration="3442000" />
     </task>
     <servers />
   </component>
