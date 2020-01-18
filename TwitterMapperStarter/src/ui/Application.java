@@ -36,7 +36,7 @@ public class Application extends JFrame {
 
     private void initialize() {
         // To use the live twitter stream, use the following line
-         twitterSource = new LiveTwitterSource();
+        twitterSource = new LiveTwitterSource();
 
         // To use the recorded twitter stream, use the following line
         // The number passed to the constructor is a speedup value:
@@ -49,7 +49,8 @@ public class Application extends JFrame {
 
     /**
      * A new query has been entered via the User Interface
-     * @param   query   The new query object
+     *
+     * @param query The new query object
      */
     public void addQuery(Query query) {
         queries.add(query);
@@ -62,6 +63,7 @@ public class Application extends JFrame {
     /**
      * return a list of all terms mentioned in all queries. The live twitter source uses this
      * to request matching tweets from the Twitter API.
+     *
      * @return
      */
     private Set<String> getQueryTerms() {
@@ -123,7 +125,15 @@ public class Application extends JFrame {
                 Point p = e.getPoint();
                 ICoordinate pos = map().getPosition(p);
                 // TODO: Use the following method to set the text that appears at the mouse cursor
-                map().setToolTipText("This is a tooltip");
+                Optional<MapMarker> mapMarkerOptional = map().getMapMarkerList().stream()
+                        .filter(m -> m.getLon() == pos.getLon() && m.getLat() == pos.getLat())
+                        .findFirst();
+                if (mapMarkerOptional.isPresent()) {
+                    MapMarkerMy mapMarker = (MapMarkerMy) mapMarkerOptional.get();
+                    map().setToolTipText(mapMarker.getTooltipText());
+                } else {
+                    map().setToolTipText("This is a tooltip");
+                }
             }
         });
     }

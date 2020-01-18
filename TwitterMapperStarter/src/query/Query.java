@@ -4,11 +4,14 @@ import filters.Filter;
 import org.openstreetmap.gui.jmapviewer.JMapViewer;
 import org.openstreetmap.gui.jmapviewer.Layer;
 import twitter4j.Status;
-import ui.MapMarkerSimple;
+import ui.MapMarkerMy;
 import util.Util;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
+import java.net.URL;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -87,8 +90,21 @@ public class Query implements Observer {
     @Override
     public void update(Observable observable, Object o) {
         Status twitStatus = (Status) o;
+        Image image = null;
+        try {
+            image = ImageIO.read(new URL(twitStatus.getUser().getMiniProfileImageURL()));
+        } catch (IOException e) {
+            System.out.println("Profile image not loaded. ");
+            System.out.println(e.getMessage());
+        }
         if (filter.matches(twitStatus)) {
-            map.addMapMarker(new MapMarkerSimple(layer, Util.statusCoordinate(twitStatus)));
+            map.addMapMarker(new MapMarkerMy(
+                    layer,
+                    Util.statusCoordinate(twitStatus),
+                    color,
+                    image,
+                    twitStatus.getText()
+            ));
         }
     }
 }

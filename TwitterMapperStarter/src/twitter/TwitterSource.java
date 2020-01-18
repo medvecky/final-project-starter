@@ -32,8 +32,6 @@ public abstract class TwitterSource extends Observable {
     }
 
     // This method is called each time a tweet is delivered to the application.
-    // TODO: Each active query should be informed about each incoming tweet so that
-    //       it can determine whether the tweet should be displayed
     protected void handleTweet(Status s) {
         setChanged();
         notifyObservers(s);
