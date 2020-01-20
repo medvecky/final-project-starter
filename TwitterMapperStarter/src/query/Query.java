@@ -81,9 +81,9 @@ public class Query implements Observer {
     /**
      * This query is no longer interesting, so terminate it and remove all traces of its existence.
      * <p>
-     * TODO: Implement this method
      */
     public void terminate() {
+        layer.setVisible(false);
 
     }
 
@@ -103,7 +103,8 @@ public class Query implements Observer {
                     Util.statusCoordinate(twitStatus),
                     color,
                     image,
-                    twitStatus.getText()
+                    twitStatus.getText(),
+                    twitStatus.getUser().getBiggerProfileImageURL()
             ));
         }
     }

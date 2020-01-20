@@ -10,13 +10,21 @@ public class MapMarkerMy extends MapMarkerCircle {
     private static final double defaultMarkerSize = 15.0;
     private Image image;
     private String tooltipText;
+    private String profileImageUrl;
 
-    public MapMarkerMy(Layer layer, Coordinate coord, Color color, Image image, String tooltipText) {
+    public MapMarkerMy(
+            Layer layer,
+            Coordinate coord,
+            Color color,
+            Image image,
+            String tooltipText,
+            String profileImageUrl) {
         super(layer, null, coord, defaultMarkerSize, STYLE.FIXED, getDefaultStyle());
         this.image = image;
         this.tooltipText = tooltipText;
         setColor(Color.BLACK);
         setBackColor(color);
+        this.profileImageUrl = profileImageUrl;
     }
 
     @Override
@@ -33,5 +41,9 @@ public class MapMarkerMy extends MapMarkerCircle {
 
     public String getTooltipText() {
         return tooltipText;
+    }
+
+    public String getProfileImageUrl() {
+        return profileImageUrl;
     }
 }

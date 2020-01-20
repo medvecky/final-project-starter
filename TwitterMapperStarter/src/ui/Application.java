@@ -11,11 +11,14 @@ import twitter.LiveTwitterSource;
 import twitter.PlaybackTwitterSource;
 import twitter.TwitterSource;
 import util.SphericalGeometry;
+import util.Util;
 
 import javax.swing.*;
+import javax.swing.text.html.HTMLDocument;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 import java.util.*;
 import java.util.List;
 import java.util.Timer;
@@ -125,19 +128,25 @@ public class Application extends JFrame {
                 Point p = e.getPoint();
                 ICoordinate pos = map().getPosition(p);
                 // TODO: Use the following method to set the text that appears at the mouse cursor
-                Optional<MapMarker> mapMarkerOptional = map().getMapMarkerList().stream()
-                        .filter(m -> m.getLon() == pos.getLon() && m.getLat() == pos.getLat())
-                        .findFirst();
-                if (mapMarkerOptional.isPresent()) {
-                    MapMarkerMy mapMarker = (MapMarkerMy) mapMarkerOptional.get();
-                    map().setToolTipText(mapMarker.getTooltipText());
-                } else {
-                    map().setToolTipText("This is a tooltip");
+                List<MapMarker> markers = getMarkersCovering(pos,pixelWidth(p));
+                String text="";
+                BufferedImage img= Util.defaultImage;
+                HTMLDocument htmlDocument = null;
+                for(MapMarker m :  markers){
+                    MapMarkerMy ma = (MapMarkerMy) m;
+                    text = getHtml(ma.getProfileImageUrl(), ma.getTooltipText());
                 }
+                map().setToolTipText(text);
             }
         });
     }
 
+
+    public String getHtml(String imgUrl, String text){
+        String res;
+        res = "<html><style>html{background-color: #F7D358; }</style><body> <img src = "+imgUrl+">"+text+"</body></html>";
+        return res;
+    }
     // How big is a single pixel on the map?  We use this to compute which tweet markers
     // are at the current most position.
     private double pixelWidth(Point p) {

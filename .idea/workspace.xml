@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="493994da-a99d-4ffa-a55c-69e7a7e63e85" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/MapMarkerMy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/query/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/query/Query.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/twitter/TwitterSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/twitter/TwitterSource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/MapMarkerSimple.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/MapMarkerSimple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/MapMarkerMy.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/MapMarkerMy.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/query/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/query/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/twitter/TwitterSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/twitter/TwitterSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/MapMarkerMy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/MapMarkerMy.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -242,6 +239,7 @@
       <workItem from="1579156444816" duration="2038000" />
       <workItem from="1579161287913" duration="3442000" />
       <workItem from="1579241106166" duration="7689000" />
+      <workItem from="1579503291802" duration="5483000" />
     </task>
     <servers />
   </component>
