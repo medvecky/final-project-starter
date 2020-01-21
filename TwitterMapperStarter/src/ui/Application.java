@@ -7,6 +7,7 @@ import org.openstreetmap.gui.jmapviewer.interfaces.ICoordinate;
 import org.openstreetmap.gui.jmapviewer.interfaces.MapMarker;
 import org.openstreetmap.gui.jmapviewer.tilesources.BingAerialTileSource;
 import query.Query;
+import query.QueryManager;
 import twitter.LiveTwitterSource;
 import twitter.PlaybackTwitterSource;
 import twitter.TwitterSource;
@@ -33,7 +34,7 @@ public class Application extends JFrame {
     // The provider of the tiles for the map, we use the Bing source
     private BingAerialTileSource bing;
     // All of the active queries
-    private List<Query> queries = new ArrayList<>();
+    private QueryManager queryManager;
     // The source of tweets, a TwitterSource, either live or playback
     private TwitterSource twitterSource;
 
@@ -46,8 +47,7 @@ public class Application extends JFrame {
         //  1.0 - play back at the recorded speed
         //  2.0 - play back twice as fast
 //        twitterSource = new PlaybackTwitterSource(60.0);
-
-        queries = new ArrayList<>();
+        queryManager = new QueryManager();
     }
 
     /**
@@ -56,25 +56,10 @@ public class Application extends JFrame {
      * @param query The new query object
      */
     public void addQuery(Query query) {
-        queries.add(query);
-        Set<String> allterms = getQueryTerms();
-        twitterSource.setFilterTerms(allterms);
+        queryManager.addQuery(query);
+        twitterSource.setFilterTerms(queryManager.getQueryTerms());
         contentPanel.addQuery(query);
         twitterSource.addObserver(query);
-    }
-
-    /**
-     * return a list of all terms mentioned in all queries. The live twitter source uses this
-     * to request matching tweets from the Twitter API.
-     *
-     * @return
-     */
-    private Set<String> getQueryTerms() {
-        Set<String> ans = new HashSet<>();
-        for (Query q : queries) {
-            ans.addAll(q.getFilter().terms());
-        }
-        return ans;
     }
 
     /**
@@ -127,12 +112,9 @@ public class Application extends JFrame {
             public void mouseMoved(MouseEvent e) {
                 Point p = e.getPoint();
                 ICoordinate pos = map().getPosition(p);
-                // TODO: Use the following method to set the text that appears at the mouse cursor
-                List<MapMarker> markers = getMarkersCovering(pos,pixelWidth(p));
-                String text="";
-                BufferedImage img= Util.defaultImage;
-                HTMLDocument htmlDocument = null;
-                for(MapMarker m :  markers){
+                List<MapMarker> markers = getMarkersCovering(pos, pixelWidth(p));
+                String text = "";
+                for (MapMarker m : markers) {
                     MapMarkerMy ma = (MapMarkerMy) m;
                     text = getHtml(ma.getProfileImageUrl(), ma.getTooltipText());
                 }
@@ -142,11 +124,11 @@ public class Application extends JFrame {
     }
 
 
-    public String getHtml(String imgUrl, String text){
-        String res;
-        res = "<html><style>html{background-color: #F7D358; }</style><body> <img src = "+imgUrl+">"+text+"</body></html>";
-        return res;
+    public String getHtml(String imgUrl, String text) {
+        return "<html><style>html{background-color: #F7D358; }</style><body> <img src = "
+                + imgUrl + ">" + text + "</body></html>";
     }
+
     // How big is a single pixel on the map?  We use this to compute which tweet markers
     // are at the current most position.
     private double pixelWidth(Point p) {
@@ -157,13 +139,7 @@ public class Application extends JFrame {
 
     // Get those layers (of tweet markers) that are visible because their corresponding query is enabled
     private Set<Layer> getVisibleLayers() {
-        Set<Layer> ans = new HashSet<>();
-        for (Query q : queries) {
-            if (q.getVisible()) {
-                ans.add(q.getLayer());
-            }
-        }
-        return ans;
+       return queryManager.getVisibleLayers();
     }
 
     // Get all the markers at the given map position, at the current map zoom setting
@@ -196,7 +172,7 @@ public class Application extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 System.out.println("Recomputing visible queries");
-                for (Query q : queries) {
+                for (Query q : queryManager) {
                     JCheckBox box = q.getCheckBox();
                     Boolean state = box.isSelected();
                     q.setVisible(state);
@@ -208,9 +184,8 @@ public class Application extends JFrame {
 
     // A query has been deleted, remove all traces of it
     public void terminateQuery(Query query) {
-        queries.remove(query);
-        Set<String> allterms = getQueryTerms();
-        twitterSource.setFilterTerms(allterms);
+        queryManager.removeQuery(query);
+        twitterSource.setFilterTerms(queryManager.getQueryTerms());
         twitterSource.deleteObserver(query);
     }
 }

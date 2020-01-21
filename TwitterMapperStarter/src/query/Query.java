@@ -17,7 +17,6 @@ import java.util.Observer;
 
 /**
  * A query over the twitter stream.
- * TODO: Task 4: you are to complete this class.
  */
 public class Query implements Observer {
     // The map on which to display markers when the query matches
@@ -76,15 +75,6 @@ public class Query implements Observer {
     @Override
     public String toString() {
         return "Query: " + queryString;
-    }
-
-    /**
-     * This query is no longer interesting, so terminate it and remove all traces of its existence.
-     * <p>
-     */
-    public void terminate() {
-        layer.setVisible(false);
-
     }
 
     @Override

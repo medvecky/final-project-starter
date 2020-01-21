@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="493994da-a99d-4ffa-a55c-69e7a7e63e85" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/query/QueryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/query/Query.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/query/Query.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/MapMarkerMy.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/MapMarkerMy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/ContentPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/ContentPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/ContentPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/ContentPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/ContentPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/out/ui/ContentPanel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/query/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/query/Query.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/twitter/LiveTwitterSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/twitter/LiveTwitterSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/MapMarkerMy.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/MapMarkerMy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/ContentPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterMapperStarter/src/ui/ContentPanel.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,39 +111,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestScanner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TwitterMapperStarter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="filters.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="filters.test" />
-      <option name="MAIN_CLASS_NAME" value="filters.test.TestScanner" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="filters in TwitterMapperStarter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TwitterMapperStarter" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="filters.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="filters" />
-      <option name="TEST_OBJECT" value="package" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,6 +127,36 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="filters.test" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="twitter.test in TwitterMapperStarter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TwitterMapperStarter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="twitter.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="twitter.test" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="util.test in TwitterMapperStarter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TwitterMapperStarter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="util.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="util.test" />
       <option name="TEST_OBJECT" value="package" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -215,10 +218,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.util.test in TwitterMapperStarter" />
+        <item itemvalue="JUnit.twitter.test in TwitterMapperStarter" />
         <item itemvalue="JUnit.filters.test in TwitterMapperStarter" />
         <item itemvalue="JUnit.TestParser.testHairy" />
-        <item itemvalue="JUnit.TestScanner" />
-        <item itemvalue="JUnit.filters in TwitterMapperStarter" />
       </list>
     </recent_temporary>
   </component>
@@ -240,6 +243,7 @@
       <workItem from="1579161287913" duration="3442000" />
       <workItem from="1579241106166" duration="7689000" />
       <workItem from="1579503291802" duration="5483000" />
+      <workItem from="1579586820316" duration="4562000" />
     </task>
     <servers />
   </component>

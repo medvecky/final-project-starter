@@ -65,7 +65,6 @@ public class ContentPanel extends JPanel {
             @Override
             public void actionPerformed(ActionEvent e) {
                 app.terminateQuery(query);
-                query.terminate();
                 existingQueryList.remove(newQueryPanel);
                 revalidate();
             }
